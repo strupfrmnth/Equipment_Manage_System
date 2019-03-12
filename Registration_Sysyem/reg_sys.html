@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>檢視系統</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet"> <!--google font-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="main.js"></script>
+</head>
+<body>
+    <div class="box">
+        <h2>借用登記名單</h2>
+        <div class="register-box">
+            <table class="table table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>#</th>
+                        <th>姓名</th>
+                        <th>器材名稱</th>
+                        <th>數量</th>
+                        <th>借用時間</th>
+                        <th>工具</th>
+                    </tr>
+                </thead>
+                <tbody id="tb">
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>XXX</td>
+                        <td>aaaaaaaaa</td>
+                        <td>1</td>
+                        <td>66666</td>
+                        <td>
+                            <button type="button" class="btn btn-primary" onclick="ShowForm(this.parentNode)">修改</button>
+                            <button type="button" class="btn btn-danger" onclick="Delete(1)">刪除</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>YYY</td>
+                        <td>aaaaaaaaa</td>
+                        <td>1</td>
+                        <td>66666</td>
+                        <td>
+                            <button type="button" class="btn btn-primary" onclick="ShowForm(this.parentNode)">修改</button>
+                            <button type="button" class="btn btn-danger" onclick="Delete(2)">刪除</button>
+                        </td>
+                    </tr>
+                    <tr></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- EditForm -->
+    <div id="edit" class="modal">
+        <form class="modal-box animate" action="">
+            <div><h2>修改表格</h2></div>
+            <div class="form-group row">
+                <label for="borrow-name" class="col-sm-4 col-form-label">姓名</label>
+                <div class="col-sm-8">
+                    <input type="text" readonly class="form-control-plaintext" name="borrow-name" id="borrow-name">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="equip-name" class="col-sm-4 col-form-label">器材名稱</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" name="equip-name" id="equip-name" required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="number" class="col-sm-4 col-form-label">數量</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" name="number" id="number" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <button type="button" class="btn btn-success btn-lg btn-block">完成</button>
+                </div>
+                <div class="col-sm-6">
+                    <button type="button" class="btn btn-danger btn-lg btn-block" onclick="HideForm()">取消</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+body {
+    font-family: 'Noto Sans TC', sans-serif;
+}
+.box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    padding: 40px;
+    background: rgba(0, 0, 0, .8);
+    box-sizing: border-box;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, .5);
+    border-radius: 10px;
+
+}
+.box h2 {
+    margin: 0px 0px 20px 0px;
+    padding: 0%;
+    color: #fff;
+    text-align: center;
+}
+.box .borrow-box {
+    width: 100%;
+    position: relative;
+    float: left;
+}
+.box .borrow-box input {
+    width: 100%;
+    padding: 10px 0px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #fff;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+    letter-spacing: 1px;
+}
+.box .borrow-box label {
+    position: absolute;
+    top: 0;
+    padding: 10px 0px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+.box .borrow-box input:focus ~ label,
+.box .borrow-box input:valid ~ label {
+    top: -1.3rem;
+    color: rgb(149, 219, 247);
+    font-size: 0.8rem;
+}
+#equip-name {
+    display: inline-block;
+    width: 75%;
+    margin-right: 10%;
+}
+#num {
+    display: inline-block;
+    width: 15%;
+}
+.box .borrow-box .floating-box {
+    float: left;
+}
+.box button[type="submit"] {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    background-color: #0499ff;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+.box button[type="submit"]:hover {
+    background-color: #0069af;
+    font-family: 'Noto Sans TC', sans-serif;
+}
