@@ -1,10 +1,10 @@
 function checkForm() {
-    oform = document.forms['formPost'];
-    if(oform.elements["contact-num"].value.length!=10) {
+    var oform = document.forms['formPost'];
+    if(isNaN(oform.elements["contact-num"].value) || oform.elements["contact-num"].value.length!=10) {
         alert("請輸入正確手機號碼")
         return false;
     }
-    if(!Number.isInteger(oform.elements["number"].value) || oform.elements["number"].value.length>2) {
+    if(isNaN(oform.elements["number"].value) || oform.elements["number"].value.length>2) {
         alert("請輸入正確數量")
         return false;
     }
